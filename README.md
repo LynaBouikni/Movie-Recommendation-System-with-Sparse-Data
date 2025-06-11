@@ -8,9 +8,6 @@
 
 > Collaborative Filtering · Matrix Factorization · SVD · KNN · Ensemble Modeling
 
-
-> Collaborative Filtering · Matrix Factorization · SVD · KNN · Ensemble Modeling
-
 ---
 
 ## 📌 Overview
