@@ -1,5 +1,14 @@
 # 🎬 Movie Recommendation System with Sparse Data
 
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/LynaBouikni/Movie-Recommendation-System-with-Sparse-Data.svg)](https://github.com/LynaBouikni/Movie-Recommendation-System-with-Sparse-Data)
+[![Repo Size](https://img.shields.io/github/repo-size/LynaBouikni/Movie-Recommendation-System-with-Sparse-Data.svg)](https://github.com/LynaBouikni/Movie-Recommendation-System-with-Sparse-Data)
+[![Status](https://img.shields.io/badge/Project-Complete-green.svg)](https://github.com/LynaBouikni)
+
+> Collaborative Filtering · Matrix Factorization · SVD · KNN · Ensemble Modeling
+
+
 > Collaborative Filtering · Matrix Factorization · SVD · KNN · Ensemble Modeling
 
 ---
@@ -14,7 +23,7 @@ This project tackles one of the core challenges in building movie recommendation
 - Singular Value Decomposition (SVD)
 - An **ensemble method** combining MF, SVD, and KNN for robust predictions
 
- All methods were benchmarked on RMSE and accuracy, with thoughtful trade-offs between prediction quality and computational cost.
+All methods were benchmarked on RMSE and accuracy, with thoughtful trade-offs between prediction quality and computational cost.
 
 ---
 
@@ -24,10 +33,10 @@ This project tackles one of the core challenges in building movie recommendation
 
 This project aims to:
 
-- Understand the limitations of traditional recommender algorithms on sparse data
-- Test different models and aggregation techniques to improve prediction quality
-- Compare runtime, RMSE, and accuracy across all methods
-- Analyze overfitting tendencies and generalization capabilities
+- Understand the limitations of traditional recommender algorithms on sparse data  
+- Test different models and aggregation techniques to improve prediction quality  
+- Compare runtime, RMSE, and accuracy across all methods  
+- Analyze overfitting tendencies and generalization capabilities  
 
 ---
 
@@ -65,30 +74,35 @@ This project aims to:
 - Explored multiple values of k (best ~50)
 
 ### 🎛️ 5. Final Ensemble Method
-- Combined MF, SVD, and KNN in a **fold-wise aggregation pipeline**
+- Combined MF, SVD, and KNN in a **fold-wise aggregation pipeline**  
 - Aggregation via RMSE-optimal averaging
 
 ---
 
 ## 📊 Results
 
-| Model                  | RMSE   | Accuracy (%) | Time (s) |
-|------------------------|--------|---------------|----------|
-| MF (baseline)          | 0.969  | 24.4          | 188.15   |
-| MF (ensemble, 20x)     | **0.89**   | 24.89         | 101.37   |
-| MF + SVD + KNN Ensemble| 0.992  | **27.73**     | **81.65**|
+| Model                    | RMSE   | Accuracy (%) | Time (s) |
+|--------------------------|--------|---------------|----------|
+| MF (baseline)            | 0.969  | 24.4          | 188.15   |
+| MF (ensemble, 20x)       | **0.89** | 24.89         | 101.37   |
+| MF + SVD + KNN Ensemble  | 0.992  | **27.73**     | **81.65**|
 
 ⚖️ **Trade-Offs Observed**:
 
-- MF Ensembling had the lowest RMSE.
-- Ensemble method gave the best **accuracy** and fastest runtime.
-- SVD prone to overfitting on higher latent ranks.
+- MF Ensembling had the lowest RMSE.  
+- The full ensemble had the best **accuracy** and **speed**.  
+- SVD offered compact solutions but overfit easily at higher ranks.
 
 ---
 
 ## 🛠 Tech Stack
 
-
+- **Languages**: Python  
+- **Core Libraries**:
+  - `numpy==1.25.1`
+  - `scikit-learn==1.3.0`
+  - `scipy==1.11.1`
+  - `torch==2.0.1` *(for future enhancements or benchmarking)*
 
 ---
 
@@ -105,10 +119,10 @@ This project aims to:
 
 ## 🧠 Key Learnings
 
-- Sparse matrix completion requires strong regularization and efficient masking.
-- Ensembling helps **stabilize predictions** across folds and methods.
-- Voting is computationally expensive and often less effective than averaging.
-- Overfitting risks increase with richer representations (e.g., SVD).
+- Sparse matrix completion requires strong regularization and efficient masking.  
+- Ensembling helps **stabilize predictions** across folds and methods.  
+- Voting is computationally expensive and often less effective than averaging.  
+- Overfitting risks increase with richer representations (e.g., SVD).  
 - Trade-offs between accuracy, runtime, and complexity must be carefully balanced.
 
 ---
