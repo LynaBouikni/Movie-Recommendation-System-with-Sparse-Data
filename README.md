@@ -1,7 +1,6 @@
 # 🎬 Movie Recommendation System with Sparse Data
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
-[![Repo Size](https://img.shields.io/github/repo-size/LynaBouikni/Movie-Recommendation-System-with-Sparse-Data.svg)](https://github.com/LynaBouikni/Movie-Recommendation-System-with-Sparse-Data)
 ![Project Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 > Collaborative Filtering · Matrix Factorization · SVD · KNN · Ensemble Modeling
